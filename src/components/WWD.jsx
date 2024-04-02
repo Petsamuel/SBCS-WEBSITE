@@ -15,9 +15,34 @@ export const WWD = () => {
                 <div className="my-16 ">
                     <p className="text-3xl font-bold text-center text-white ">What We Do</p>
                 </div>
-                <Swiper
+                {window.innerWidth <= 640 ? 
+               ( <Swiper
                     // install Swiper modules
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
+
+
+                    spaceBetween={50}
+                    slidesPerView={1}
+                    navigation
+                    pagination={{ clickable: true }}
+                >
+                    <div className="grid lg:grid-cols-3 gap-4 py-[3em] mb-7 pb-9">
+                        {Wwd.map((val, index) => (
+                            <SwiperSlide key={index}>
+                                <div className="bg-white rounded-xl p-2 flex flex-col items-center">
+                                    <img src={val.image} alt={val.name} className="rounded-lg" />
+                                    <p className="text-black font-bold text-center py-8 text-sm">{val.name}</p>
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </div>
+
+                </Swiper>) :
+                 <Swiper
+                    // install Swiper modules
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+
+
                     spaceBetween={50}
                     slidesPerView={3}
                     navigation
@@ -34,7 +59,8 @@ export const WWD = () => {
                         ))}
                     </div>
 
-                </Swiper>
+                </Swiper>}
+                
 
 
             </div>
