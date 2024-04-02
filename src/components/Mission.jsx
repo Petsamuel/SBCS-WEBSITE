@@ -15,16 +15,16 @@ export const Mission = () => {
                 </div>
                 <div>
                     <img src={Line1} alt="line" className="hidden lg:inline h-full w-[1.5em]" />
-                    <img src={Line2} alt="line" className="lg:hidden w-[1.5em]" />
+                    <img src={Line2} alt="line" className="lg:hidden w-screen" />
 
                 </div>
                 <div className="flex-1">
                     <p className="text-2xl my-16">Core Value</p>
-                    <div className="flex gap-12 items-center">
+                    <div className="flex lg:gap-12 gap-2 items-center">
                         {Future.map((val, index) => (
-                            <p key={index} className=" w-[3.5em] h-auto lg:p-4 p-2 bg-white rounded-full text-black text-sm">
-                                {val}
-                            </p>
+                            <div key={index} className=" h-auto lg:p-5 p-3 bg-white rounded-full text-black text-sm flex items-center w-11 text-center lg:w-16">
+                                <p className="text-center font-bold">{val}</p>
+                            </div>
                         ))}
 
                     </div>

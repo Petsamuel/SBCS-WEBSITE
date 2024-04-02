@@ -17,7 +17,7 @@ export const Header = () => {
                     <div className={` md:lg:inline relative `}>
                         <ul className="lg:flex lg:md:relative absolute lg:md:flex-row flex flex-col bg-white h-screen lg:h-0">
                             {Menu.map((menu, key) => (
-                                <div key={key} className={!active ? " pt-[4em] w-screen mt-16 lg:pt-0 lg:w-auto lg:mt-auto" : "hidden"}>
+                                <div key={key} className={!active ? " pt-[2em] w-screen -left-[5em] mt-12 lg:pt-0 lg:w-auto lg:mt-auto" : "hidden"}>
                                     <li className="mx-7"><Link to={menu.link}>{menu.name} </Link></li>
                                 </div>
                             ))}
