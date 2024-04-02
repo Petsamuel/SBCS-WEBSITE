@@ -7,7 +7,7 @@ export const Events = () => {
   return (
     <section className="mx-8 flex flex-col mt-16 items-center justify-center gap-10 mb-32">
       <div className="mx-8 flex gap-16 items-center flex-col-reverse lg:flex-row">
-        <div className="flex-auto w-1/2 ">
+        <div className="flex-auto lg:w-1/2 ">
           <p className="text-2xl font-black">Featured Name Event</p>
           <p className='py-6'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam expedita harum quo dolor impedit cupiditate quidem asperiores beatae repudiandae,
           </p>

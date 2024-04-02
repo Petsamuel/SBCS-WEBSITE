@@ -17,14 +17,15 @@ export const Header = () => {
                     <div className={` md:lg:inline relative `}>
                         <ul className="lg:flex lg:md:relative absolute lg:md:flex-row flex flex-col bg-white h-screen lg:h-0 lg:-left-0  -left-[12em]">
                             {Menu.map((menu, key) => (
-                                <div key={key} className={active ? " pt-[2em] w-screen mt-12 lg:pt-0 lg:w-auto lg:mt-auto" : "hidden"}>
+                                <div key={key} className={active ? " pt-[2em] w-screen mt-12 lg:pt-0 lg:w-auto lg:mt-auto" : "hidden lg:inline"}>
                                     <li className="mx-7"><Link to={menu.link}>{menu.name} </Link></li>
                                 </div>
                             ))}
+                            <li><Link>Youtube</Link></li>
                         </ul>
                     </div>
                     <div className="flex gap-4 items-center z-30">
-                        <Link>Youtube</Link>
+
                         <div className="lg:hidden cursor-pointer" onClick={() => setActive(!active)}> {!active ? <TiThMenu className="text-2xl" /> : <MdOutlineClose className="text-2xl" />}</div>
                     </div>
 
