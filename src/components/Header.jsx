@@ -7,6 +7,7 @@ import { MdOutlineClose } from "react-icons/md";
 
 export const Header = () => {
     const [active, setActive] = useState(false)
+    const [value, setValue] = useState()
     return (
         <Fragment>
             <header className="header fixed z-50 shadow-md w-full justify-center p-2 text-sm bg-white">
@@ -17,8 +18,8 @@ export const Header = () => {
                     <div className={` md:lg:inline relative `}>
                         <ul className="lg:flex lg:md:relative absolute lg:md:flex-row flex flex-col bg-white h-screen lg:h-0 lg:-left-0  -left-[12em]">
                             {Menu.map((menu, key) => (
-                                <div key={key} className={active ? " pt-[2em] w-screen mt-12 lg:pt-0 lg:w-auto lg:mt-auto" : "hidden lg:inline"}>
-                                    <li className="mx-7"><Link to={menu.link}>{menu.name} </Link></li>
+                                <div key={key} onClick={() => setValue(key)} className={active ? " pt-[2em] w-screen mt-12 lg:pt-0 lg:w-auto lg:mt-auto" : "hidden lg:inline"}>
+                                    <li className={`mx-7 ${value === key ? "border-b-2 border-[#184B9A] " : ""}`}><Link to={menu.link}>{menu.name} </Link></li>
                                 </div>
                             ))}
 

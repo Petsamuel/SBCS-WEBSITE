@@ -1,9 +1,13 @@
 
+import { useState } from "react"
 import profile from "../assets/images/profile.png"
 import profile2 from "../assets/images/profile2.png"
 import { TiSocialLinkedin, TiSocialTwitter, TiSocialFacebook } from "react-icons/ti"
 
+
 export const Team = () => {
+    const [active, setActive] = useState(1)
+    // const [active, setActive] = useState()
 
     const TeamGroup = [
         "All", "Commitee", "Mentors", "Reps", "Partners"
@@ -24,6 +28,10 @@ export const Team = () => {
         },
     ]
 
+    const handleClick = (val) => {
+        setActive(val)
+    }
+
     return (
         <section className="flex flex-col justify-center items-center place-content-center mx-8">
             <div className="my-24 flex flex-col  justify-center items-center place-content-center">
@@ -35,7 +43,7 @@ export const Team = () => {
                 <div className="flex gap-4 overflow-hidden">
                     {
                         TeamGroup.map((val, index) => (
-                            <p className="cursor-pointer" key={index}> {val} </p>
+                            <p className={`cursor-pointer ${active === index ? "border-b-2 border-[#184B9A]" : ""}`} key={index} onClick={() => { handleClick(index) }}> {val} </p>
                         ))
                     }
                 </div>
@@ -47,8 +55,8 @@ export const Team = () => {
                         <div key={index} className=" shadow-md p-8">
                             <img src={val.image} alt={val.position} className="rounded-sm" />
                             <div className="py-4">
-                                <p className="font-black cursor-pointer">{val.name}</p>
-                                <p className="font-thin cursor-pointer">{val.position}</p>
+                                <p className="font-semibold cursor-pointer py-4">{val.name}</p>
+                                <p className="font-thin cursor-pointer ">{val.position}</p>
                                 <div className="flex gap-4 pt-4">
                                     <TiSocialFacebook className="text-lg cursor-pointer" />
                                     <TiSocialLinkedin className="text-lg cursor-pointer" />
