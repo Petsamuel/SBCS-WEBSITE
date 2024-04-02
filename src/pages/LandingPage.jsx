@@ -3,7 +3,7 @@ import { Mission } from "../components/Mission"
 import { Composition } from "../components/Composition"
 import { WWD } from "../components/WWD"
 import { FAQ } from "../components/FAQ"
-export const Home = () => {
+export const LandingPage = () => {
 
     return (
         <section className="mt-8 h-full">
@@ -11,7 +11,7 @@ export const Home = () => {
             <Mission />
             <Composition />
             <WWD />
-            <FAQ/>
+            <FAQ />
 
         </section>
     )
