@@ -21,7 +21,7 @@ export const Header = () => {
                                     <li className="mx-7"><Link to={menu.link}>{menu.name} </Link></li>
                                 </div>
                             ))}
-                            <li><Link>Youtube</Link></li>
+
                         </ul>
                     </div>
                     <div className="flex gap-4 items-center z-30">
