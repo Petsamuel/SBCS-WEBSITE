@@ -25,7 +25,7 @@ export const Team = () => {
     ]
 
     return (
-        <section className="flex flex-col justify-center items-center place-content-center">
+        <section className="flex flex-col justify-center items-center place-content-center mx-8">
             <div className="my-24 flex flex-col  justify-center items-center place-content-center">
                 <p className="text-3xl font-bold  text-black ">Meet Our Team</p>
                 <p className="font-thin py-4">Our expert team is made up of creatives with technical knowhow, strategist who think outside the box , and developers who push innovation.</p>
