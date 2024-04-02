@@ -5,7 +5,7 @@ export const Hero = () => {
     return (
         <section className="flex grow flex-col items-center place-content-center my-5 py-6 mx-8">
             <div className="flex items-center justify-center flex-col ">
-                <p className="font-['Rubik'] font-black text-4xl">
+                <p className="font-['Rubik'] font-black text-4xl mt-6">
                     Empowering and inspiring the Future of Tech
                 </p>
                 <p className="font-extralight p-6 shadow-sm">
